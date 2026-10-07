@@ -1,17 +1,17 @@
-# tugas1_152024056_cepin
+# IFB355 - Pemrograman Mobile
+Repository ini digunakan untuk menyimpan project dan tugas praktikum mata kuliah **IFB355 Pemrograman Mobile** menggunakan Flutter. Setiap tugas praktikum akan dikerjakan pada branch yang berbeda agar hasil dari setiap tugas tetap tersimpan dan dapat dikembangkan untuk tugas berikutnya.
 
-A new Flutter project.
+## Informasi
+- **Mata Kuliah:** IFB355 Pemrograman Mobile
+- **Nama:** Cepin Marsal Javier Hilmi Darmawan
+- **NIM:** 152024056
+- **Kelas:** BB
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Branch
+Setiap tugas memiliki branch tersendiri.
+```text
+main
+├── tugas-3
+├── tugas-4
+├── tugas-5
+└── ...
