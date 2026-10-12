@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'menu_page.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage({
+    super.key,
+    required this.onMenuTap,
+    required this.onProfileTap,
+  });
+
+  final VoidCallback onMenuTap;
+  final VoidCallback onProfileTap;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFF5F7FA),
-
-      body: SafeArea(
+    return SafeArea(
+      child: Container(
+        color: const Color(0xFFF5F7FA),
         child: Column(
           children: [
             // HEADER
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.fromLTRB(
-                16,
-                18,
-                16,
-                20,
-              ),
+              padding: const EdgeInsets.fromLTRB(16, 18, 16, 20),
               decoration: const BoxDecoration(
                 color: Colors.orange,
                 borderRadius: BorderRadius.only(
@@ -37,25 +37,14 @@ class HomePage extends StatelessWidget {
                       // TEKS GREETING
                       Expanded(
                         child: Column(
-                          crossAxisAlignment:
-                              CrossAxisAlignment.start,
-                          children: const [
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
                             Text(
                               'Halo, Cepin Marsal!',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                              ),
-                            ),
-
-                            SizedBox(height: 4),
-
-                            Text(
-                              'E-Money Itenas',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
                               ),
                             ),
                           ],
@@ -87,21 +76,14 @@ class HomePage extends StatelessWidget {
                       Expanded(
                         child: Container(
                           height: 46,
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 14,
-                          ),
+                          padding: const EdgeInsets.symmetric(horizontal: 14),
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius:
-                                BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(14),
                           ),
                           child: const Row(
                             children: [
-                              Icon(
-                                Icons.search,
-                                color: Colors.grey,
-                                size: 22,
-                              ),
+                              Icon(Icons.search, color: Colors.grey, size: 22),
 
                               SizedBox(width: 10),
 
@@ -127,8 +109,7 @@ class HomePage extends StatelessWidget {
                         height: 46,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius:
-                              BorderRadius.circular(14),
+                          borderRadius: BorderRadius.circular(14),
                         ),
                         child: const Icon(
                           Icons.tune,
@@ -156,36 +137,29 @@ class HomePage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             height: 140,
-                            margin: const EdgeInsets.only(
-                              right: 5,
-                              bottom: 10,
-                            ),
+                            margin: const EdgeInsets.only(right: 5, bottom: 10),
                             padding: const EdgeInsets.all(14),
                             decoration: BoxDecoration(
-                              color: const Color(0xFFE1F0FF),
-                              borderRadius:
-                                  BorderRadius.circular(16),
+                              color: const Color(0xFFFFE8CC),
+                              borderRadius: BorderRadius.circular(16),
                             ),
 
                             child: Column(
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 // ICON
                                 Container(
                                   width: 38,
                                   height: 38,
-                                  decoration:
-                                      const BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius:
-                                        BorderRadius.all(
+                                    borderRadius: BorderRadius.all(
                                       Radius.circular(10),
                                     ),
                                   ),
                                   child: const Icon(
                                     Icons.account_balance_wallet,
-                                    color: Colors.blue,
+                                    color: Colors.orange,
                                     size: 22,
                                   ),
                                 ),
@@ -218,29 +192,22 @@ class HomePage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             height: 140,
-                            margin: const EdgeInsets.only(
-                              left: 5,
-                              bottom: 10,
-                            ),
+                            margin: const EdgeInsets.only(left: 5, bottom: 10),
                             padding: const EdgeInsets.all(14),
                             decoration: BoxDecoration(
                               color: const Color(0xFFE2F7E9),
-                              borderRadius:
-                                  BorderRadius.circular(16),
+                              borderRadius: BorderRadius.circular(16),
                             ),
 
                             child: Column(
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
                                   width: 38,
                                   height: 38,
-                                  decoration:
-                                      const BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius:
-                                        BorderRadius.all(
+                                    borderRadius: BorderRadius.all(
                                       Radius.circular(10),
                                     ),
                                   ),
@@ -284,29 +251,22 @@ class HomePage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             height: 140,
-                            margin: const EdgeInsets.only(
-                              right: 5,
-                              bottom: 10,
-                            ),
+                            margin: const EdgeInsets.only(right: 5, bottom: 10),
                             padding: const EdgeInsets.all(14),
                             decoration: BoxDecoration(
                               color: const Color(0xFFFFF0DC),
-                              borderRadius:
-                                  BorderRadius.circular(16),
+                              borderRadius: BorderRadius.circular(16),
                             ),
 
                             child: Column(
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
                                   width: 38,
                                   height: 38,
-                                  decoration:
-                                      const BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius:
-                                        BorderRadius.all(
+                                    borderRadius: BorderRadius.all(
                                       Radius.circular(10),
                                     ),
                                   ),
@@ -345,29 +305,22 @@ class HomePage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             height: 140,
-                            margin: const EdgeInsets.only(
-                              left: 5,
-                              bottom: 10,
-                            ),
+                            margin: const EdgeInsets.only(left: 5, bottom: 10),
                             padding: const EdgeInsets.all(14),
                             decoration: BoxDecoration(
                               color: const Color(0xFFEDE4FF),
-                              borderRadius:
-                                  BorderRadius.circular(16),
+                              borderRadius: BorderRadius.circular(16),
                             ),
 
                             child: Column(
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
                                   width: 38,
                                   height: 38,
-                                  decoration:
-                                      const BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius:
-                                        BorderRadius.all(
+                                    borderRadius: BorderRadius.all(
                                       Radius.circular(10),
                                     ),
                                   ),
@@ -411,29 +364,22 @@ class HomePage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             height: 140,
-                            margin: const EdgeInsets.only(
-                              right: 5,
-                              bottom: 10,
-                            ),
+                            margin: const EdgeInsets.only(right: 5, bottom: 10),
                             padding: const EdgeInsets.all(14),
                             decoration: BoxDecoration(
                               color: const Color(0xFFFFE5EC),
-                              borderRadius:
-                                  BorderRadius.circular(16),
+                              borderRadius: BorderRadius.circular(16),
                             ),
 
                             child: Column(
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
                                   width: 38,
                                   height: 38,
-                                  decoration:
-                                      const BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius:
-                                        BorderRadius.all(
+                                    borderRadius: BorderRadius.all(
                                       Radius.circular(10),
                                     ),
                                   ),
@@ -472,35 +418,28 @@ class HomePage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             height: 140,
-                            margin: const EdgeInsets.only(
-                              left: 5,
-                              bottom: 10,
-                            ),
+                            margin: const EdgeInsets.only(left: 5, bottom: 10),
                             padding: const EdgeInsets.all(14),
                             decoration: BoxDecoration(
-                              color: const Color(0xFFE1F0FF),
-                              borderRadius:
-                                  BorderRadius.circular(16),
+                              color: const Color(0xFFFFE8CC),
+                              borderRadius: BorderRadius.circular(16),
                             ),
 
                             child: Column(
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
                                   width: 38,
                                   height: 38,
-                                  decoration:
-                                      const BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius:
-                                        BorderRadius.all(
+                                    borderRadius: BorderRadius.all(
                                       Radius.circular(10),
                                     ),
                                   ),
                                   child: const Icon(
                                     Icons.qr_code_scanner,
-                                    color: Colors.blue,
+                                    color: Colors.orange,
                                     size: 22,
                                   ),
                                 ),
@@ -542,35 +481,53 @@ class HomePage extends StatelessWidget {
                           backgroundColor: Colors.orange,
                           foregroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(14),
                           ),
                           elevation: 0,
                         ),
 
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  const MenuPage(),
-                            ),
-                          );
-                        },
+                        onPressed: onMenuTap,
 
                         child: const Row(
-                          mainAxisAlignment:
-                              MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(
-                              Icons.apps,
-                              size: 21,
-                            ),
+                            Icon(Icons.apps, size: 21),
 
                             SizedBox(width: 8),
 
                             Text(
                               'Lihat Semua Menu',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    const SizedBox(height: 10),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 50,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                          elevation: 0,
+                        ),
+                        onPressed: onProfileTap,
+                        child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.person, size: 21),
+                            SizedBox(width: 8),
+                            Text(
+                              'Lihat Profil',
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold,

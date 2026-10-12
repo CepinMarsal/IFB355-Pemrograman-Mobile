@@ -9,7 +9,7 @@ class TopUpPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Top Up'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -32,7 +32,7 @@ class TransferPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Transfer'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -55,7 +55,7 @@ class ScanQRPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Scan QR'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -78,7 +78,7 @@ class RiwayatPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Riwayat'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -101,7 +101,7 @@ class PulsaPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Pulsa & Data'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -124,7 +124,7 @@ class VoucherGamePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Voucher Game'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -147,7 +147,7 @@ class TransportasiPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Transportasi'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -170,7 +170,7 @@ class TagihanAirPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Tagihan Air'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -193,7 +193,7 @@ class ListrikPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Listrik'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -216,7 +216,7 @@ class TVKabelPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('TV Kabel'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -239,7 +239,7 @@ class StreamingPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Streaming'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 
@@ -262,7 +262,7 @@ class BelanjaOnlinePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Belanja Online'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
 

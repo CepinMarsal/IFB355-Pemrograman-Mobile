@@ -1,29 +1,17 @@
 import 'package:flutter/material.dart';
+
 import 'menu_pages.dart';
 
 class MenuPage extends StatelessWidget {
-  const MenuPage({super.key});
+  const MenuPage({super.key, required this.onBack});
+
+  final VoidCallback onBack;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      // APP BAR
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Text(
-          'Menu E-Money',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-        backgroundColor: Colors.orange,
-        foregroundColor: Colors.white,
-      ),
-
-      // BODY
-      body: SafeArea(
+    return SafeArea(
+      child: Container(
+        color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(16),
 
@@ -34,10 +22,7 @@ class MenuPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Semua Layanan',
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
               ),
 
@@ -47,10 +32,7 @@ class MenuPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Pilih layanan yang ingin kamu gunakan',
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 13,
-                  ),
+                  style: TextStyle(color: Colors.grey, fontSize: 13),
                 ),
               ),
 
@@ -66,8 +48,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const TopUpPage(),
+                            builder: (context) => const TopUpPage(),
                           ),
                         );
                       },
@@ -77,13 +58,12 @@ class MenuPage extends StatelessWidget {
                             width: 52,
                             height: 52,
                             decoration: BoxDecoration(
-                              color: Colors.blue.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              color: Colors.orange.shade100,
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.add,
-                              color: Colors.blue.shade700,
+                              color: Colors.orange.shade700,
                               size: 28,
                             ),
                           ),
@@ -91,9 +71,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Top Up',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -107,8 +85,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const TransferPage(),
+                            builder: (context) => const TransferPage(),
                           ),
                         );
                       },
@@ -118,13 +95,12 @@ class MenuPage extends StatelessWidget {
                             width: 52,
                             height: 52,
                             decoration: BoxDecoration(
-                              color: Colors.blue.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              color: Colors.orange.shade100,
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.send,
-                              color: Colors.blue.shade700,
+                              color: Colors.orange.shade700,
                               size: 28,
                             ),
                           ),
@@ -132,9 +108,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Transfer',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -148,8 +122,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const ScanQRPage(),
+                            builder: (context) => const ScanQRPage(),
                           ),
                         );
                       },
@@ -160,8 +133,7 @@ class MenuPage extends StatelessWidget {
                             height: 52,
                             decoration: BoxDecoration(
                               color: Colors.orange.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.qr_code_scanner,
@@ -173,9 +145,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Scan QR',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -189,8 +159,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const RiwayatPage(),
+                            builder: (context) => const RiwayatPage(),
                           ),
                         );
                       },
@@ -201,8 +170,7 @@ class MenuPage extends StatelessWidget {
                             height: 52,
                             decoration: BoxDecoration(
                               color: Colors.green.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.history,
@@ -214,9 +182,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Riwayat',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -237,8 +203,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const PulsaPage(),
+                            builder: (context) => const PulsaPage(),
                           ),
                         );
                       },
@@ -249,8 +214,7 @@ class MenuPage extends StatelessWidget {
                             height: 52,
                             decoration: BoxDecoration(
                               color: Colors.pink.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.phone_android,
@@ -262,9 +226,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Pulsa & Data',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -278,8 +240,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const VoucherGamePage(),
+                            builder: (context) => const VoucherGamePage(),
                           ),
                         );
                       },
@@ -290,8 +251,7 @@ class MenuPage extends StatelessWidget {
                             height: 52,
                             decoration: BoxDecoration(
                               color: Colors.amber.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.sports_esports,
@@ -303,9 +263,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Voucher Game',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -319,8 +277,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const TransportasiPage(),
+                            builder: (context) => const TransportasiPage(),
                           ),
                         );
                       },
@@ -331,8 +288,7 @@ class MenuPage extends StatelessWidget {
                             height: 52,
                             decoration: BoxDecoration(
                               color: Colors.purple.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.directions_bus,
@@ -344,9 +300,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Transportasi',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -360,8 +314,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const TagihanAirPage(),
+                            builder: (context) => const TagihanAirPage(),
                           ),
                         );
                       },
@@ -372,8 +325,7 @@ class MenuPage extends StatelessWidget {
                             height: 52,
                             decoration: BoxDecoration(
                               color: Colors.lightBlue.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.water_drop,
@@ -385,9 +337,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Tagihan Air',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -408,8 +358,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const ListrikPage(),
+                            builder: (context) => const ListrikPage(),
                           ),
                         );
                       },
@@ -420,8 +369,7 @@ class MenuPage extends StatelessWidget {
                             height: 52,
                             decoration: BoxDecoration(
                               color: Colors.green.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.bolt,
@@ -433,9 +381,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Listrik',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -449,8 +395,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const TVKabelPage(),
+                            builder: (context) => const TVKabelPage(),
                           ),
                         );
                       },
@@ -461,8 +406,7 @@ class MenuPage extends StatelessWidget {
                             height: 52,
                             decoration: BoxDecoration(
                               color: Colors.red.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.tv,
@@ -474,9 +418,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'TV Kabel',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -490,8 +432,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const StreamingPage(),
+                            builder: (context) => const StreamingPage(),
                           ),
                         );
                       },
@@ -502,8 +443,7 @@ class MenuPage extends StatelessWidget {
                             height: 52,
                             decoration: BoxDecoration(
                               color: Colors.deepPurple.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.movie,
@@ -515,9 +455,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Streaming',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -531,8 +469,7 @@ class MenuPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const BelanjaOnlinePage(),
+                            builder: (context) => const BelanjaOnlinePage(),
                           ),
                         );
                       },
@@ -543,8 +480,7 @@ class MenuPage extends StatelessWidget {
                             height: 52,
                             decoration: BoxDecoration(
                               color: Colors.pink.shade100,
-                              borderRadius:
-                                  BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Icon(
                               Icons.shopping_bag,
@@ -556,9 +492,7 @@ class MenuPage extends StatelessWidget {
                           const Text(
                             'Belanja Online',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                            ),
+                            style: TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -578,20 +512,14 @@ class MenuPage extends StatelessWidget {
                     backgroundColor: Colors.orange,
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(14),
+                      borderRadius: BorderRadius.circular(14),
                     ),
                     elevation: 0,
                   ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
+                  onPressed: onBack,
                   child: const Text(
                     'Back',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
