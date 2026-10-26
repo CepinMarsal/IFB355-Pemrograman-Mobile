@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'pages/homepage.dart';
 import 'pages/menu_page.dart';
 import 'pages/profile.dart';
@@ -47,6 +48,14 @@ class _MainPageState extends State<MainPage> {
       HomePage(
         onMenuTap: () => _selectPage(1),
         onProfileTap: () => _selectPage(2),
+        onMapsTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const MapsPage(),
+            ),
+          );
+        },
       ),
       MenuPage(onBack: () => _selectPage(0)),
       const ProfilePage(),
@@ -62,6 +71,39 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: Navbar(
         currentIndex: _selectedIndex,
         onTap: _selectPage,
+      ),
+    );
+  }
+}
+
+class MapsPage extends StatelessWidget {
+  const MapsPage({super.key});
+
+  static const LatLng itenas = LatLng(-6.8989, 107.6361);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Google Maps'),
+        backgroundColor: Colors.orange,
+        foregroundColor: Colors.white,
+      ),
+      body: GoogleMap(
+        initialCameraPosition: const CameraPosition(
+          target: itenas,
+          zoom: 17,
+        ),
+        markers: {
+          const Marker(
+            markerId: MarkerId('itenas'),
+            position: itenas,
+            infoWindow: InfoWindow(
+              title: 'Institut Teknologi Nasional Bandung',
+              snippet: 'ITENAS',
+            ),
+          ),
+        },
       ),
     );
   }
